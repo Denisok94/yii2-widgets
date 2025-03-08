@@ -1,6 +1,6 @@
 <?php
 
-namespace app\widgets;
+namespace denisok94\yii2\widgets;
 
 use Yii;
 use yii\helpers\Html;
@@ -10,7 +10,7 @@ use yii\bootstrap4\Widget;
  * Базовая горизонтальная группировка
  * 
  * ```php
- * echo app\widgets\NavTabs::widget(['tabs' => [
+ * echo denisok94\yii2\widgets\NavTabs::widget(['tabs' => [
  *  '12' => [
  *   'label' => 'label 12',
  *   'content' => 'content 12'

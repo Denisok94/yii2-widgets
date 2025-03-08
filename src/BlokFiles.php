@@ -1,6 +1,6 @@
 <?php
 
-namespace app\widgets;
+namespace denisok94\yii2\widgets;
 
 use Yii;
 use yii\helpers\Html;
@@ -10,7 +10,7 @@ use yii\bootstrap4\Widget;
  * Базовая горизонтальная группировка
  * 
  * ```php
- * echo app\widgets\BlokFiles::widget([
+ * echo denisok94\yii2\widgets\BlokFiles::widget([
  *  'items' => $items, 
  *  'options' => [
  *      'a' => [], // or 'div' => [],
@@ -38,7 +38,7 @@ use yii\bootstrap4\Widget;
  * 
  * 
  * ```php
- * echo app\widgets\BlokFiles::widget([
+ * echo denisok94\yii2\widgets\BlokFiles::widget([
  *  'items' => $items, 
  *  'callback' => function ($action, $item, $key) {
  *      return $action = 'img' ? 'url1' : 'url2';
@@ -48,7 +48,7 @@ use yii\bootstrap4\Widget;
  * 
  * @example location full
  * ```php
- * echo app\widgets\BlokFiles::widget([
+ * echo denisok94\yii2\widgets\BlokFiles::widget([
  *  'items' => $items, 
  *  'options' => [
  *      'a' => [

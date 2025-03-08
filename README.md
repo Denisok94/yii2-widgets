@@ -1,5 +1,7 @@
 # Yii2 widgets
 
+Набор виджетов для yii2 на базе yii\bootstrap4\Widget
+
 ## Installation
 
 Run:
@@ -27,7 +29,7 @@ php composer.phar update
 ### NavTabs
 
 ```php
-use app\widgets\NavTabs;
+use denisok94\yii2\widgets\NavTabs;
 echo NavTabs::widget(['tabs' => [
  '12' => [
   'label' => 'label 12',
@@ -68,7 +70,7 @@ echo NavTabs::widget(['tabs' => [
 Базовая горизонтальная группировка
 
 ```php
-echo app\widgets\BlokFiles::widget([
+echo denisok94\yii2\widgets\BlokFiles::widget([
  'items' => $items, 
  'options' => [
      'a' => [], // or 'div' => [],
@@ -96,7 +98,7 @@ base yii html options add `['options' => []]`.
 
 
 ```php
-echo app\widgets\BlokFiles::widget([
+echo denisok94\yii2\widgets\BlokFiles::widget([
  'items' => $items, 
  'callback' => function ($action, $item, $key) {
      return $action = 'img' ? 'url1' : 'url2';
@@ -106,7 +108,7 @@ echo app\widgets\BlokFiles::widget([
 
 location full
 ```php
-echo app\widgets\BlokFiles::widget([
+echo denisok94\yii2\widgets\BlokFiles::widget([
  'items' => $items, 
  'options' => [
      'a' => [

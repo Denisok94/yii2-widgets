@@ -1,6 +1,6 @@
 <?php
 
-namespace app\widgets;
+namespace denisok94\yii2\widgets;
 
 use Yii;
 use yii\helpers\Html;
