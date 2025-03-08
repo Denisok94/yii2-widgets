@@ -1,0 +1,40 @@
+.blok-files {
+    display  : flex;
+    flex-wrap: nowrap;
+
+}
+
+.blok-files>.blok-list {
+    width     : 100%;
+    height    : 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.blok-list>.blok {
+    background     : #ffffff;
+    box-sizing     : border-box;
+    float          : left;
+    display        : block;
+    margin         : 0.5rem;
+    padding        : 0.5rem;
+    width          : 120px;
+    height         : 160px;
+    border         : 1px solid rgb(173, 181, 189);
+    border-radius  : 0.3rem;
+    text-decoration: none;
+    text-align     : center;
+}
+
+.blok-list>.blok>img {
+    box-sizing: border-box;
+    position  : relative;
+    width     : 100px;
+    height    : 100px;
+}
+
+.blok-list>.blok>span {
+    box-sizing: border-box;
+    width     : 100%;
+    text-align: center;
+}

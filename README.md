@@ -4,42 +4,41 @@
 
 ## Installation
 
-Run:
-
 ```bash
 composer require --prefer-dist denisok94/yii2-widgets
 # or
 php composer.phar require --prefer-dist denisok94/yii2-widgets
 ```
 
-or add to the `require` section of your `composer.json` file:
-
-```json
-"denisok94/yii-helper": "*"
-```
-
-```bash
-composer update
-# or
-php composer.phar update
-```
-
 ## Use
 
-### NavTabs
+- [NavTabs](#NavTabs)
+- [BlokFiles](#BlokFiles)
+- [Box](#Box)
+
+## NavTabs
+
+![example NavTabs1.png](doc/NavTabs1.png)
+![example NavTabs2.png](doc/NavTabs2.png)
 
 ```php
 use denisok94\yii2\widgets\NavTabs;
 echo NavTabs::widget(['tabs' => [
- '12' => [
-  'label' => 'label 12',
-  'content' => 'content 12'
- ],
- '14' => [
-  'label' => 'label 14',
-  'content' => 'content 14',
-  'disabled' => true
- ],
+    '1' => [
+        'label' => 'label 1',
+        'content' => 'content  text 1',
+        'disabled' => false
+    ],
+    '2' => [
+        'label' => 'label 2',
+        'content' => 'content text 2',
+        'disabled' => false
+    ],
+    '3' => [
+        'label' => 'label 3',
+        'content' => 'content 3',
+        'disabled' => true
+    ],
  //...
 ]])
 echo NavTabs::widget(['tabs' => [
@@ -65,12 +64,13 @@ echo NavTabs::widget(['tabs' => [
 ]]);
 ```
 
-### BlokFiles
+## BlokFiles
 
 Базовая горизонтальная группировка
 
 ```php
-echo denisok94\yii2\widgets\BlokFiles::widget([
+use denisok94\yii2\widgets\BlokFiles;
+echo BlokFiles::widget([
  'items' => $items, 
  'options' => [
      'a' => [], // or 'div' => [],
@@ -96,9 +96,9 @@ options span: `['key' => 'id', // items->id]`.
 
 base yii html options add `['options' => []]`.
 
-
 ```php
-echo denisok94\yii2\widgets\BlokFiles::widget([
+use denisok94\yii2\widgets\BlokFiles;
+echo BlokFiles::widget([
  'items' => $items, 
  'callback' => function ($action, $item, $key) {
      return $action = 'img' ? 'url1' : 'url2';
@@ -108,7 +108,8 @@ echo denisok94\yii2\widgets\BlokFiles::widget([
 
 location full
 ```php
-echo denisok94\yii2\widgets\BlokFiles::widget([
+use denisok94\yii2\widgets\BlokFiles;
+echo BlokFiles::widget([
  'items' => $items, 
  'options' => [
      'a' => [
@@ -127,10 +128,22 @@ echo denisok94\yii2\widgets\BlokFiles::widget([
 ]);
 ```
 
-### Box
+## Box
+
+![example Box.png](doc/Box.png)
 
 ```php
-<?php Box::begin(); ?>
+
+use denisok94\yii2\widgets\NavTabs;
+
+<?php Box::begin([
+    'type' => 'primary', // solid / default / primary / success / warning / danger / info
+    'title' => 'Box title text',
+    'footer' => 'Box footer text', // or ~ $this->render('_footer', ['model' => $model])
+    'collapse' => true, // show button collapse
+    'remove' => true, // show button remove
+]); ?>
+<!-- box body ↓ -->
 <blockquote>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     <small>Someone famous in <cite title="Source Title">Source Title</cite></small>

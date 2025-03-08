@@ -94,13 +94,14 @@ class BlokFiles extends Widget
      */
     public function init()
     {
+        BlokFilesAsset::register($this->getView());
         parent::init();
         if ($this->items === null) {
             $this->items = [];
         }
         if ($this->callback === null) {
             $this->callback = function ($action, $item, $key) {
-                return $this->options[$action]['url'] . $item[$key];
+                return ($this->options[$action]['url'] ?? '') . $item[$key];
             };
         }
         if ($this->callback_o === null) {

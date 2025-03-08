@@ -59,13 +59,13 @@ class NavTabs extends Widget
 
             $tab .= Html::tag(
                 'li',
-                Html::a("<span>" . $value['label'] . "</span>", "#tab_$key", $value['disabled'] ? [] : ['data-toggle' => 'tab']),
-                ($active ? ['class' => 'active'] : ($value['disabled'] ? ['class' => 'disabled'] : []))
+                Html::a("<span>" . $value['label'] . "</span>", "#tab_$key", isset($value['disabled']) ? [] : ['data-toggle' => 'tab']),
+                ($active ? ['class' => 'active'] : (isset($value['disabled']) ? ['class' => 'disabled'] : []))
             );
 
             $content .= Html::tag(
                 'div',
-                $value['disabled'] ? '' : $value['content'],
+                isset($value['disabled']) ? '' : $value['content'],
                 [
                     'class' => "tab-pane" . ($active ? ' active' : ''),
                     'id' => "tab_$key"
