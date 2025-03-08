@@ -13,8 +13,8 @@ php composer.phar require --prefer-dist denisok94/yii2-widgets
 ## Use
 
 - [NavTabs](#NavTabs)
-- [BlokFiles](#BlokFiles)
 - [Box](#Box)
+- [BlokFiles](#BlokFiles)
 
 ## NavTabs
 
@@ -27,12 +27,10 @@ echo NavTabs::widget(['tabs' => [
     '1' => [
         'label' => 'label 1',
         'content' => 'content  text 1',
-        'disabled' => false
     ],
     '2' => [
         'label' => 'label 2',
         'content' => 'content text 2',
-        'disabled' => false
     ],
     '3' => [
         'label' => 'label 3',
@@ -64,9 +62,32 @@ echo NavTabs::widget(['tabs' => [
 ]]);
 ```
 
+## Box
+
+![example Box.png](doc/Box.png)
+
+```php
+
+use denisok94\yii2\widgets\Box;
+
+<?php Box::begin([
+    'type' => 'primary', // solid / default / primary / success / warning / danger / info
+    'title' => 'Box title text',
+    'footer' => 'Box footer text', // or ~ $this->render('_footer', ['model' => $model])
+    'collapse' => true, // show button collapse
+    'remove' => true, // show button remove
+]); ?>
+<!-- box body ↓ -->
+<blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+</blockquote>
+<?php Box::end(); ?>
+```
+
 ## BlokFiles
 
-Базовая горизонтальная группировка
+Базовая горизонтальная группировка (тест)
 
 ```php
 use denisok94\yii2\widgets\BlokFiles;
@@ -126,27 +147,4 @@ echo BlokFiles::widget([
      ], 
  ]
 ]);
-```
-
-## Box
-
-![example Box.png](doc/Box.png)
-
-```php
-
-use denisok94\yii2\widgets\NavTabs;
-
-<?php Box::begin([
-    'type' => 'primary', // solid / default / primary / success / warning / danger / info
-    'title' => 'Box title text',
-    'footer' => 'Box footer text', // or ~ $this->render('_footer', ['model' => $model])
-    'collapse' => true, // show button collapse
-    'remove' => true, // show button remove
-]); ?>
-<!-- box body ↓ -->
-<blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-    <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-</blockquote>
-<?php Box::end(); ?>
 ```
