@@ -12,9 +12,9 @@ php composer.phar require --prefer-dist denisok94/yii2-widgets
 
 ## Use
 
-- [NavTabs](#NavTabs)
-- [Box](#Box)
-- [BlokFiles](#BlokFiles)
+- [NavTabs](#navtabs)
+- [Box](#box)
+- [BlokFiles](#blokfiles)
 
 ## NavTabs
 
